@@ -1,9 +1,16 @@
-<div class="col-md-12">
-	<div class="well">
-		<h3><%= link_to task.description, task, remote: true, method: :delete, data: { confirm: 'Are you sure?' } %></h3>
-		<p class="deadline"><%= task.deadline %></p>
-		<p class="pull-right">
-			<%= link_to "Edit", edit_task_path(task), remote: true %>
-		</p>
+<div class="well">
+	<h3 class="task-name"><%= link_to task.description, task, remote: true %></h3>
+	<p class="deadline"><%= task.deadline %></p>
+	<div class="right-buttons">
+		<%= link_to edit_task_path(task), remote: true do %>
+			<button class="btn btn-info">
+				<i class="fas fa-pen-square"></i>  Edit
+			</button>
+		<% end %>
+		<%= link_to task_path(task), method: :delete, data: { confirm: 'Are you sure?' } do %>
+			<button class="btn btn-info">
+				<i class="fas fa-trash"></i>  Delete
+			</button>
+		<% end %>
 	</div>
 </div>

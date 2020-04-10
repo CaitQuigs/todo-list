@@ -27,7 +27,10 @@ class TasksController < ApplicationController
   # DELETE /tasks/1
   # DELETE /tasks/1.json
   def destroy
-    @task.destroy
+    set_task
+    @task.destroy 
+
+    redirect_to tasks_path
   end
 
   private

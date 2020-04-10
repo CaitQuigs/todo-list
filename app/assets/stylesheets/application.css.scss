@@ -1,0 +1,90 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "bootstrap-datetimepicker";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+body {
+	background: hsl(194, 29, 95);
+}
+
+button {
+	margin: 50px 0px 20px 0px;
+	a {
+		&:hover {
+			text-decoration-line: none;
+		}
+	}
+}
+
+a {
+	color: #336699;
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline #336699 solid;
+	}
+}
+
+.well {
+	background-color: #FFFFFF;
+	border-radius: 5px;
+	border-color: #5BC0DE;
+}
+
+.headline {
+	color: #27515E;
+	font-size: 4em;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 40px;
+	border-bottom: 3px solid #27515E;
+	padding-bottom: 20px;
+}
+
+.btn-info {
+	border-color: #5BC0DE;
+}
+
+.right-buttons {
+	justify-content: flex-end;
+}
+
+.task-name {
+	h3 {
+		font-size: 2em;
+		color: #43585E;
+		padding: 20px;
+		margin: 20px;
+		&:hover {
+			text-decoration: line-through #43585E solid;
+		}
+	}
+}
+
+.deadline {
+	font-size: 1em;
+}
+
+#task-form {
+	margin: 10px 0;
+	background-color: #A1D4E3;
+	padding: 10px 10px 5px;
+	border-radius: 5px;
+}
